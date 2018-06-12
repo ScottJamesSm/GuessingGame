@@ -13,19 +13,18 @@ public class Main {
      */
 
 
+    public static void main(String[] args) {
+        System.out.println("welcome to the guessing game! I'm thinking of a number between 1 and 100. Can you figure it out?");
 
-        public static void main(String[] args) {
-System.out.println("welcome to the guessing game! I'm thinking of a number between 1 and 100. Can you figure it out?");
+        int randomNumber = (int) Math.ceil(Math.random() * 100);
+        System.out.println(randomNumber);
 
-int randomNumber =  (int) Math.ceil(Math.random() * 100);
-System.out.println(randomNumber);
-
-            Scanner input = new Scanner(System.in);
-
-int guessedNumber;
-System.out.println("guess a number betwwen 1 and and 100");
-guessedNumber = input.nextInt();
-System.out.println("you guessed the number " + guessedNumber);
+        Scanner input = new Scanner(System.in);
+        do {
+            int guessedNumber;
+            System.out.println("guess a number betwwen 1 and and 100");
+            guessedNumber = input.nextInt();
+            System.out.println("you guessed the number " + guessedNumber);
 // need to compare
             if (randomNumber > guessedNumber) {
                 System.out.println("your guess is too low. Guess higher.");
@@ -34,9 +33,21 @@ System.out.println("you guessed the number " + guessedNumber);
             } else {
                 System.out.println("Congradulations! You guessed my number " + randomNumber + "!!!");
             }
-            }
         }
-
+    }
+}
+/*
+    int guessedNumber;
+System.out.println("guess a number betwwen 1 and and 100");
+        guessedNumber = input.nextInt();
+        System.out.println("you guessed the number " + guessedNumber);
+// need to compare
+        if (randomNumber > guessedNumber) {
+        System.out.println("your guess is too low. Guess higher.");
+        } else if (randomNumber < guessedNumber) {
+        System.out.println("guess is to high guess lower");
+        } else {
+        System.out.println("Congradulations! You guessed my number " + randomNumber + "!!!");
 /*
     public static void main(String[] args) {
 	// write your code here
@@ -57,7 +68,7 @@ System.out.println("you guessed the number " + guessedNumber);
 
         double randomNumberRoundedNormally = Math.round(randomNumberTimesHundred);
         System.out.println("The Rounding that we're not used to: " + randomNumberRoundedNormally);
-
+*/
     }
 }
 */
