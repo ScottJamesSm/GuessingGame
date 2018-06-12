@@ -20,8 +20,9 @@ public class Main {
         System.out.println(randomNumber);
 
         Scanner input = new Scanner(System.in);
+
+        int guessedNumber;
         do {
-            int guessedNumber;
             System.out.println("guess a number betwwen 1 and and 100");
             guessedNumber = input.nextInt();
             System.out.println("you guessed the number " + guessedNumber);
@@ -33,21 +34,10 @@ public class Main {
             } else {
                 System.out.println("Congradulations! You guessed my number " + randomNumber + "!!!");
             }
-        }
+        } while (randomNumber != guessedNumber);
     }
 }
-/*
-    int guessedNumber;
-System.out.println("guess a number betwwen 1 and and 100");
-        guessedNumber = input.nextInt();
-        System.out.println("you guessed the number " + guessedNumber);
-// need to compare
-        if (randomNumber > guessedNumber) {
-        System.out.println("your guess is too low. Guess higher.");
-        } else if (randomNumber < guessedNumber) {
-        System.out.println("guess is to high guess lower");
-        } else {
-        System.out.println("Congradulations! You guessed my number " + randomNumber + "!!!");
+
 /*
     public static void main(String[] args) {
 	// write your code here
@@ -69,6 +59,5 @@ System.out.println("guess a number betwwen 1 and and 100");
         double randomNumberRoundedNormally = Math.round(randomNumberTimesHundred);
         System.out.println("The Rounding that we're not used to: " + randomNumberRoundedNormally);
 */
-    }
-}
-*/
+
+
