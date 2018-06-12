@@ -20,32 +20,38 @@ public class Main {
         System.out.println(randomNumber);
 
         Scanner input = new Scanner(System.in);
-
+        //set nuber of guesses
+        int numberOfGuesses = 0;
+        final int MAX_GUESS_COUNT = 4;
         int guessedNumber;
+
+
         try {
             do {
+
                 System.out.println("guess a number betwwen 1 and and 100");
                 guessedNumber = input.nextInt();
                 System.out.println("you guessed the number " + guessedNumber);
 
 // need to compare
-                System.out.println("please enter an actual number.");
                 if (randomNumber > guessedNumber) {
                     System.out.println("your guess is too low. Guess higher.");
+                    numberOfGuesses = numberOfGuesses + 1;
+                    numberOfGuesses++;
+                    System.out.println("you have made " + numberOfGuesses + " gusses.");
                 } else if (randomNumber < guessedNumber) {
                     System.out.println("guess is to high guess lower");
                 } else {
                     System.out.println("Congradulations! You guessed my number " + randomNumber + "!!!");
                 }
-            } while (randomNumber != guessedNumber);
-        } catch (
-                Exception e)
-
-        {
+            } while (randomNumber != guessedNumber && numberOfGuesses < MAX_GUESS_COUNT);
+        } catch (Exception e) {
             System.out.println("please entern an actual number.");
+
         }
     }
 }
+
 
 /*
     public static void main(String[] args) {
